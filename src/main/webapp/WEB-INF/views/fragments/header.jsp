@@ -10,8 +10,7 @@
 
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown" role="button" aria-expanded="false">Projects
-					<span class="caret"></span>
-			</a>
+					<span class="caret"></span></a>
 
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="<spring:url value="/project/add"/>">Add</a></li>
@@ -19,10 +18,9 @@
 				</ul>
 			</li>
 
-			<li class="dropdown"><a href="#" class="dropdown-toggle">
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button"
-					aria-expanded="false">Resources <span class="caret"></span>
-			</a>
+					aria-expanded="false">Resources <span class="caret"></span></a>
 
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="#">Add</a></li>
