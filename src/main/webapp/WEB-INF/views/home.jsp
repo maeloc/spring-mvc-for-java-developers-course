@@ -14,6 +14,13 @@
 <body>
     <jsp:include page="../views/fragments/header.jsp"></jsp:include>
     <div class="container">
+        <h2>Current Project</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><label>Project Name:</label><span>${currentProject.name }</span>
+            <li class="list-group-item"><label>Sponsor:</label><span>${currentProject.sponsor }</span>
+            <li class="list-group-item"><label>Description:</label><span>${currentProject.description }</span>
+            
+        </ul>
     </div>
 </body>
 </html>
