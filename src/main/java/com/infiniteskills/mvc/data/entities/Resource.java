@@ -1,6 +1,7 @@
 package com.infiniteskills.mvc.data.entities;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Resource {
 
@@ -9,6 +10,8 @@ public class Resource {
   private String type;
   private BigDecimal cost;
   private String unitOfMeasure;
+  private String[] indicators;
+  private String notes;
 
   public Long getResourceId() {
     return resourceId;
@@ -50,10 +53,28 @@ public class Resource {
     this.unitOfMeasure = unitOfMeasure;
   }
 
+  public String[] getIndicators() {
+    return indicators;
+  }
+
+  public void setIndicators(String[] indicators) {
+    this.indicators = indicators;
+  }
+
+  public String getNotes() {
+    return notes;
+  }
+
+  public void setNotes(String notes) {
+    this.notes = notes;
+  }
+
   @Override
   public String toString() {
     return "Resource [resourceId=" + resourceId + ", name=" + name + ", type="
-        + type + ", cost=" + cost + ", unitOfMeasure=" + unitOfMeasure + "]";
+        + type + ", cost=" + cost + ", unitOfMeasure=" + unitOfMeasure
+        + ", indicators=" + Arrays.toString(indicators) + ", notes=" + notes
+        + "]";
   }
 
 }
