@@ -1,17 +1,19 @@
 package com.infiniteskills.mvc.data.entities;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Project {
   private Long projectId;
   private String name;
   private String description;
-  private String sponsor;
+  private Sponsor sponsor;
   private BigDecimal authorizedHours;
   private BigDecimal authorizedFunds;
   private String year;
   private boolean special;
   private String type;
+  private List<String> pointsOfContact;
 
   public Long getProjectId() {
     return projectId;
@@ -26,7 +28,6 @@ public class Project {
   }
 
   public void setName(String name) {
-    System.out.println("Spring MVC Databinding in action");
     this.name = name;
   }
 
@@ -38,11 +39,11 @@ public class Project {
     this.description = description;
   }
 
-  public String getSponsor() {
+  public Sponsor getSponsor() {
     return sponsor;
   }
 
-  public void setSponsor(String sponsor) {
+  public void setSponsor(Sponsor sponsor) {
     this.sponsor = sponsor;
   }
 
@@ -86,13 +87,21 @@ public class Project {
     this.type = type;
   }
 
+  public List<String> getPointsOfContact() {
+    return pointsOfContact;
+  }
+
+  public void setPointsOfContact(List<String> pointsOfContact) {
+    this.pointsOfContact = pointsOfContact;
+  }
+
   @Override
   public String toString() {
     return "Project [projectId=" + projectId + ", name=" + name
         + ", description=" + description + ", sponsor=" + sponsor
         + ", authorizedHours=" + authorizedHours + ", authorizedFunds="
         + authorizedFunds + ", year=" + year + ", special=" + special
-        + ", type=" + type + "]";
+        + ", type=" + type + ", pointsOfContact=" + pointsOfContact + "]";
   }
 
 }
