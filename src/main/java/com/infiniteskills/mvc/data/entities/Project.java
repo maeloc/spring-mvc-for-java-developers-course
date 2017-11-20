@@ -3,16 +3,29 @@ package com.infiniteskills.mvc.data.entities;
 import java.math.BigDecimal;
 import java.util.List;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class Project {
+
   private Long projectId;
+
   private String name;
+
+  @NotBlank(message = "You must provide a description")
   private String description;
+
   private Sponsor sponsor;
+
   private BigDecimal authorizedHours;
+
   private BigDecimal authorizedFunds;
+
   private String year;
+
   private boolean special;
+
   private String type;
+
   private List<String> pointsOfContact;
 
   public Long getProjectId() {
