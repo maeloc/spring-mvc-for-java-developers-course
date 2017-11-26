@@ -4,12 +4,19 @@
   <artifactId>course-project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  
+
+    <properties>
+        <springframework.version>4.1.6.RELEASE</springframework.version>
+    </properties>  
+  
   <dependencies>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-webmvc</artifactId>
-  		<version>4.2.6.RELEASE</version>
+  		<version>${springframework.version}</version>
   	</dependency>
+
   	<dependency>
   		<groupId>org.slf4j</groupId>
   		<artifactId>slf4j-log4j13</artifactId>
@@ -18,7 +25,7 @@
   	<dependency>
   		<groupId>log4j</groupId>
   		<artifactId>log4j</artifactId>
-  		<version>1.2.16-redhat-2</version>
+  		<version>1.2.17</version>
   	</dependency>
   	<dependency>
   		<groupId>jstl</groupId>
@@ -28,12 +35,32 @@
   	<dependency>
   		<groupId>javax.validation</groupId>
   		<artifactId>validation-api</artifactId>
-  		<version>1.1.0.Final-redhat-1</version>
+  		<version>1.1.0.Final</version>
   	</dependency>
   	<dependency>
   		<groupId>org.hibernate</groupId>
   		<artifactId>hibernate-validator</artifactId>
-  		<version>5.2.5.Final-redhat-2</version>
+  		<version>5.2.0.CR1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-databind</artifactId>
+  		<version>2.5.4</version>
   	</dependency>
   </dependencies>
+  
+    <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
 </project>

@@ -19,7 +19,7 @@
 
 	<div class="container">
 		
-		<h2>An error was encountered and handled by a controller method annotated with @ExceptionHandler.</h2>
+		<h2>Resolved by InternalResourceViewResolver</h2>
 
 	</div>
 </body>

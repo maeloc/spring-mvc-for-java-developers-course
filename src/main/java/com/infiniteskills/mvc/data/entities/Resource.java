@@ -5,76 +5,82 @@ import java.util.Arrays;
 
 public class Resource {
 
-  private Long resourceId;
-  private String name;
-  private String type;
-  private BigDecimal cost;
-  private String unitOfMeasure;
-  private String[] indicators;
-  private String notes;
+	private Long resourceId;
 
-  public Long getResourceId() {
-    return resourceId;
-  }
+	private String name;
 
-  public void setResourceId(Long resourceId) {
-    this.resourceId = resourceId;
-  }
+	private String type;
 
-  public String getName() {
-    return name;
-  }
+	private BigDecimal cost;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	private String unitOfMeasure;
 
-  public String getType() {
-    return type;
-  }
+	private String[] indicators;
 
-  public void setType(String type) {
-    this.type = type;
-  }
+	private String notes;
+	
+	public Long getResourceId() {
+		return resourceId;
+	}
 
-  public BigDecimal getCost() {
-    return cost;
-  }
+	public void setResourceId(Long resourceId) {
+		this.resourceId = resourceId;
+	}
 
-  public void setCost(BigDecimal cost) {
-    this.cost = cost;
-  }
+	public String getName() {
+		return name;
+	}
 
-  public String getUnitOfMeasure() {
-    return unitOfMeasure;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public void setUnitOfMeasure(String unitOfMeasure) {
-    this.unitOfMeasure = unitOfMeasure;
-  }
+	public String getType() {
+		return type;
+	}
 
-  public String[] getIndicators() {
-    return indicators;
-  }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-  public void setIndicators(String[] indicators) {
-    this.indicators = indicators;
-  }
+	public BigDecimal getCost() {
+		return cost;
+	}
 
-  public String getNotes() {
-    return notes;
-  }
+	public void setCost(BigDecimal cost) {
+		this.cost = cost;
+	}
 
-  public void setNotes(String notes) {
-    this.notes = notes;
-  }
+	public String getUnitOfMeasure() {
+		return unitOfMeasure;
+	}
 
-  @Override
-  public String toString() {
-    return "Resource [resourceId=" + resourceId + ", name=" + name + ", type="
-        + type + ", cost=" + cost + ", unitOfMeasure=" + unitOfMeasure
-        + ", indicators=" + Arrays.toString(indicators) + ", notes=" + notes
-        + "]";
-  }
+	public void setUnitOfMeasure(String unitOfMeasure) {
+		this.unitOfMeasure = unitOfMeasure;
+	}
+
+	public String[] getIndicators() {
+		return indicators;
+	}
+
+	public void setIndicators(String[] indicators) {
+		this.indicators = indicators;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+
+	@Override
+	public String toString() {
+		return "Resource [resourceId=" + resourceId + ", name=" + name
+				+ ", type=" + type + ", cost=" + cost + ", unitOfMeasure="
+				+ unitOfMeasure + ", indicators=" + Arrays.toString(indicators)
+				+ ", notes=" + notes + "]";
+	}
 
 }

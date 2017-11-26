@@ -7,25 +7,29 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.infiniteskills.mvc.data.entities.Project;
+import com.infiniteskills.mvc.data.entities.Sponsor;
 
 public class ProjectService {
 
   private final List<Project> projects = new LinkedList<>();
 
   public ProjectService() {
-    final Project javaProject = this.create("Java Project",
-        "This is a Java Project");
-    final Project jsProject = this.create("Javascript Project",
-        "This is a Javascript Project");
-    final Project htmlProject = this.create("HTML Project",
-        "This is a HTML Project");
+    final Project javaProject = this.createProject("Java Project",
+        "This is a Java Project",
+        new Sponsor("Oracle", "555-555-5555", "oracle@oracle.com"));
+    final Project javascriptProject = this.createProject("Javascript Project",
+        "This is a Javascript Project",
+        new Sponsor("Mozilla", "555-555-5555", "mozilla@mozilla.com"));
+    final Project htmlProject = this.createProject("HTML Project",
+        "This is an HTML project",
+        new Sponsor("Google", "555-555-5555", "google@google.com"));
 
-    this.projects.addAll(Arrays.asList(new Project[] { javaProject, jsProject,
-        htmlProject }));
+    this.projects.addAll(Arrays
+        .asList(new Project[] { javaProject, javascriptProject, htmlProject }));
   }
 
   public List<Project> findAll() {
-    return projects;
+    return this.projects;
   }
 
   public Project find(Long projectId) {
@@ -34,9 +38,9 @@ public class ProjectService {
     }).collect(Collectors.toList()).get(0);
   }
 
-  private Project create(String title, String description) {
+  private Project createProject(String title, String description,
+      Sponsor sponsor) {
     final Project project = new Project();
-
     project.setName(title);
     project.setAuthorizedFunds(new BigDecimal("100000"));
     project.setAuthorizedHours(new BigDecimal("1000"));
@@ -45,8 +49,12 @@ public class ProjectService {
     project.setType("multi");
     project.setYear("2015");
     project.setDescription(description);
-
+    project.setSponsor(sponsor);
     return project;
+  }
+
+  public void save(Project project) {
+    this.projects.add(project);
   }
 
 }
