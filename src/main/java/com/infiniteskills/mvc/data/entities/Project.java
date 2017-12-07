@@ -1,124 +1,135 @@
 package com.infiniteskills.mvc.data.entities;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@XmlRootElement(name="project")
+@XmlRootElement(name = "project")
 public class Project {
 
-	private Long projectId;
+  private Long projectId;
 
-	private String name;
+  private String name;
 
-	@NotBlank(message="You must provide a description.")
-	private String description;
+  @NotBlank(message = "You must provide a description.")
+  private String description;
 
-	private Sponsor sponsor;
+  private Sponsor sponsor;
 
-	private BigDecimal authorizedHours;
+  private BigDecimal authorizedHours;
 
-	private BigDecimal authorizedFunds;
+  private BigDecimal authorizedFunds;
 
-	private String year;
+  private String year;
 
-	private boolean special;
+  private boolean special;
 
-	private String type;
+  private String type;
 
-	private List<String> pointsOfContact;
-	
-	public Long getProjectId() {
-		return projectId;
-	}
+  private List<String> pointsOfContact;
 
-	public void setProjectId(Long projectId) {
-		this.projectId = projectId;
-	}
+  private Date startDate;
 
-	public String getName() {
-		return name;
-	}
+  public Long getProjectId() {
+    return projectId;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public void setProjectId(Long projectId) {
+    this.projectId = projectId;
+  }
 
-	public String getDescription() {
-		return description;
-	}
+  public String getName() {
+    return name;
+  }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public BigDecimal getAuthorizedHours() {
-		return authorizedHours;
-	}
+  public String getDescription() {
+    return description;
+  }
 
-	public void setAuthorizedHours(BigDecimal authorizedHours) {
-		this.authorizedHours = authorizedHours;
-	}
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-	public BigDecimal getAuthorizedFunds() {
-		return authorizedFunds;
-	}
+  public BigDecimal getAuthorizedHours() {
+    return authorizedHours;
+  }
 
-	public void setAuthorizedFunds(BigDecimal authorizedFunds) {
-		this.authorizedFunds = authorizedFunds;
-	}
+  public void setAuthorizedHours(BigDecimal authorizedHours) {
+    this.authorizedHours = authorizedHours;
+  }
 
-	public String getYear() {
-		return year;
-	}
+  public BigDecimal getAuthorizedFunds() {
+    return authorizedFunds;
+  }
 
-	public void setYear(String year) {
-		this.year = year;
-	}
+  public void setAuthorizedFunds(BigDecimal authorizedFunds) {
+    this.authorizedFunds = authorizedFunds;
+  }
 
-	public Sponsor getSponsor() {
-		return sponsor;
-	}
+  public String getYear() {
+    return year;
+  }
 
-	public void setSponsor(Sponsor sponsor) {
-		this.sponsor = sponsor;
-	}
+  public void setYear(String year) {
+    this.year = year;
+  }
 
-	public boolean isSpecial() {
-		return special;
-	}
+  public Sponsor getSponsor() {
+    return sponsor;
+  }
 
-	public void setSpecial(boolean special) {
-		this.special = special;
-	}
+  public void setSponsor(Sponsor sponsor) {
+    this.sponsor = sponsor;
+  }
 
-	public String getType() {
-		return type;
-	}
+  public boolean isSpecial() {
+    return special;
+  }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+  public void setSpecial(boolean special) {
+    this.special = special;
+  }
 
-	public List<String> getPointsOfContact() {
-		return pointsOfContact;
-	}
+  public String getType() {
+    return type;
+  }
 
-	public void setPointsOfContact(List<String> pointsOfContact) {
-		this.pointsOfContact = pointsOfContact;
-	}
+  public void setType(String type) {
+    this.type = type;
+  }
 
-	@Override
-	public String toString() {
-		return "Project [projectId=" + projectId + ", name=" + name
-				+ ", description=" + description + ", sponsor=" + sponsor
-				+ ", authorizedHours=" + authorizedHours + ", authorizedFunds="
-				+ authorizedFunds + ", year=" + year + ", special=" + special
-				+ ", type=" + type + ", pointsOfContact=" + pointsOfContact
-				+ "]";
-	}
+  public List<String> getPointsOfContact() {
+    return pointsOfContact;
+  }
+
+  public void setPointsOfContact(List<String> pointsOfContact) {
+    this.pointsOfContact = pointsOfContact;
+  }
+
+  public Date getStartDate() {
+    return startDate;
+  }
+
+  public void setStartDate(Date startDate) {
+    this.startDate = startDate;
+  }
+
+  @Override
+  public String toString() {
+    return "Project [projectId=" + projectId + ", name=" + name
+        + ", description=" + description + ", sponsor=" + sponsor
+        + ", authorizedHours=" + authorizedHours + ", authorizedFunds="
+        + authorizedFunds + ", year=" + year + ", special=" + special
+        + ", type=" + type + ", pointsOfContact=" + pointsOfContact
+        + ", startDate=" + startDate + "]";
+  }
 
 }

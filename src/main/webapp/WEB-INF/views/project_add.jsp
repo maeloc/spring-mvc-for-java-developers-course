@@ -66,6 +66,12 @@
 					<form:input id="hours"
 						cssClass="form-control" path="authorizedHours"/>
 				</div>
+
+				<div class="form-group">
+					<label for="startDate">Start Date (Julian yyyyddd)</label>
+					<form:input id="startDate"
+						cssClass="form-control" path="startDate"/>
+				</div>
 			
 				<div class="form-group">
 					<label for="project-name">Description</label>
@@ -90,7 +96,6 @@
 					<form:input id="poc3" 
 							cssClass="form-control" path="pointsOfContact[2]"/>
 				</div>
-				
 				
 				<div class="form-group">
 					<label for="special">Special</label>
